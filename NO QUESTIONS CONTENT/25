@@ -1,0 +1,5 @@
+we use dir.data_type to find what methods we can use with any given data type
+we use help(datatype.method) to find how to use a given method
+
+to check the functions that can be used we first use import "builtins"
+then we use the same command dir.function 
