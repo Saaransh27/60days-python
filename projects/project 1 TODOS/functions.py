@@ -1,4 +1,4 @@
-FILEPATH = r"D:\60days pyhton\projects\todos.txt"
+FILEPATH = r"projects\project 1 TODOS\todos.txt"
 
 def get_todos(filepath = FILEPATH):
     """Read a text file and return the
