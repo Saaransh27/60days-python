@@ -1,6 +1,21 @@
+import os
 import functions
 import FreeSimpleGUI as sg
 import time
+import sys
+
+exe_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+
+todos_file_path = os.path.join(exe_dir, 'todos.txt')
+
+if not os.path.exists(todos_file_path):
+    try:
+        with open(todos_file_path, 'w') as file:
+            pass
+    except Exception as e:
+        print(f"Error creating todos.txt: {e}")
+else:
+    print("todos.txt already exists.")
 
 sg.theme("black")
 
