@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import os
 
 st.set_page_config(layout="wide")
 
@@ -8,7 +7,7 @@ st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("images/photo.png")
+    st.image("D:\60days pyhton\app2-portfolio\images\photo.png")
 
 with col2:
     st.title("Saaransh Jain")
@@ -30,20 +29,12 @@ col3, empty_col, col4 = st.columns([1.5, 0.4, 1.5])
 # Read the data from the CSV file
 df = pd.read_csv("data.csv", sep=";")
 
-# Function to get image path
-def get_image_path(image_name):
-    return os.path.join("images", image_name)
-
 # Display the first 10 rows of the dataframe in col3
 with col3:
     for index, row in df[:10].iterrows():
         st.header(row["title"])
         st.write(row["description"])
-        image_path = get_image_path(row["image"])
-        if os.path.exists(image_path):
-            st.image(image_path)
-        else:
-            st.warning(f"Image {image_path} not found!")
+        st.image("images/" + row["image"])
         st.write(f"[Source Code]({row['url']})")
 
 # Display the remaining rows of the dataframe in col4
@@ -51,10 +42,5 @@ with col4:
     for index, row in df[10:].iterrows():
         st.header(row["title"])
         st.write(row["description"])
-        image_path = get_image_path(row["image"])
-        st.write(f"Trying to open image at: {image_path}")  # Debug print
-        if os.path.exists(image_path):
-            st.image(image_path)
-        else:
-            st.warning(f"Image {image_path} not found!")
+        st.image("images/" + row["image"])
         st.write(f"[Source Code]({row['url']})")
