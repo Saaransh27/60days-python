@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 
-print(os.getcwd())
+st.write((os.getcwd()))
 
 # st.set_page_config(layout="wide")
 
