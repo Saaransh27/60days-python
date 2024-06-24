@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("images/photo.png")
+    st.image("./images/photo.png")
 
 with col2:
     st.title("Saaransh Jain")
@@ -27,7 +27,7 @@ st.info(content2)
 col3, empty_col, col4 = st.columns([1.5, 0.4, 1.5])
 
 # Read the data from the CSV file
-df = pd.read_csv("data.csv", sep=";")
+df = pd.read_csv("./data.csv", sep=";")
 
 # Display the first 10 rows of the dataframe in col3
 with col3:
