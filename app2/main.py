@@ -4,6 +4,8 @@ import os
 
 st.write((os.getcwd()))
 
+st.image("/mount/src/60days-python/app2/images/photo.png")
+
 # st.set_page_config(layout="wide")
 
 # script_dir = os.path.dirname("main.py")
@@ -12,7 +14,7 @@ st.write((os.getcwd()))
 # col1, col2 = st.columns(2)
 
 # with col1:
-#     st.image("./images/photo.png")
+#     st.image("/mount/src/60days-python/app2/images/photo.png")
 
 # with col2:
 #     st.title("Saaransh Jain")
