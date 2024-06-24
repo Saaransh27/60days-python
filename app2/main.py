@@ -1,46 +1,51 @@
 import streamlit as st
 import pandas as pd
+import os
 
-st.set_page_config(layout="wide")
+print(os.getcwd())
 
-# Define columns for the layout
-col1, col2 = st.columns(2)
+# st.set_page_config(layout="wide")
 
-with col1:
-    st.image("./images/photo.png")
+# script_dir = os.path.dirname("main.py")
 
-with col2:
-    st.title("Saaransh Jain")
-    content = """
-    Hi, I am Saaransh! I am a Python programmer, a teacher, a college student, and ambitious to become a content creator.
-    I mainly work in Python, JavaScript, and C++ but also have experience working on Figma, Canva, Excel, and Word.
-    I completed schooling in 2022 and would complete my engineering in 2026. My goal is to get into a top IIM for an MBA.
-    """
-    st.info(content)
+# # Define columns for the layout
+# col1, col2 = st.columns(2)
 
-content2 = """
-Below you can find some of the apps I have built in Python. Feel free to contact me!
-"""
-st.info(content2)
+# with col1:
+#     st.image("./images/photo.png")
 
-# Define columns for the apps section
-col3, empty_col, col4 = st.columns([1.5, 0.4, 1.5])
+# with col2:
+#     st.title("Saaransh Jain")
+#     content = """
+#     Hi, I am Saaransh! I am a Python programmer, a teacher, a college student, and ambitious to become a content creator.
+#     I mainly work in Python, JavaScript, and C++ but also have experience working on Figma, Canva, Excel, and Word.
+#     I completed schooling in 2022 and would complete my engineering in 2026. My goal is to get into a top IIM for an MBA.
+#     """
+#     st.info(content)
 
-# Read the data from the CSV file
-df = pd.read_csv("./data.csv", sep=";")
+# content2 = """
+# Below you can find some of the apps I have built in Python. Feel free to contact me!
+# """
+# st.info(content2)
 
-# Display the first 10 rows of the dataframe in col3
-with col3:
-    for index, row in df[:10].iterrows():
-        st.header(row["title"])
-        st.write(row["description"])
-        st.image("images/" + row["image"])
-        st.write(f"[Source Code]({row['url']})")
+# # Define columns for the apps section
+# col3, empty_col, col4 = st.columns([1.5, 0.4, 1.5])
 
-# Display the remaining rows of the dataframe in col4
-with col4:
-    for index, row in df[10:].iterrows():
-        st.header(row["title"])
-        st.write(row["description"])
-        st.image("images/" + row["image"])
-        st.write(f"[Source Code]({row['url']})")
+# # Read the data from the CSV file
+# df = pd.read_csv("./data.csv", sep=";")
+
+# # Display the first 10 rows of the dataframe in col3
+# with col3:
+#     for index, row in df[:10].iterrows():
+#         st.header(row["title"])
+#         st.write(row["description"])
+#         st.image("images/" + row["image"])
+#         st.write(f"[Source Code]({row['url']})")
+
+# # Display the remaining rows of the dataframe in col4
+# with col4:
+#     for index, row in df[10:].iterrows():
+#         st.header(row["title"])
+#         st.write(row["description"])
+#         st.image("images/" + row["image"])
+#         st.write(f"[Source Code]({row['url']})")
