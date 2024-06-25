@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("D:\60days pyhton\app2-portfolio\images\photo.png")
+    st.image("D:\60days pyhton\app2-portfolio\images\personal.jpg")
 
 with col2:
     st.title("Saaransh Jain")
