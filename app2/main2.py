@@ -6,7 +6,7 @@ import os
 st.set_page_config(layout="wide")
 
 # Determine script directory dynamically
-script_dir = os.path.dirname("main2.py")  # This gets the directory of the current script
+script_dir = os.path.dirname(__file__)  # This gets the directory of the current script
 
 # Define columns for the layout
 col1, col2 = st.columns(2)
